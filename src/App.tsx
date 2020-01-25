@@ -1,8 +1,9 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import React, { createContext } from 'react';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import UserOverview from './pages/UserOverview/UserOverview';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,15 +24,30 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+export const UserContext = createContext({
+  user:"",
+  userInfo:{},
+})
+
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/home" component={Home} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <UserContext.Provider value = {
+    {
+      user:"",
+      userInfo:{}
+    }
+  }>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/home" component={Home} exact={true}  />
+          <Route path="/user/" component={Home} exact={true} />
+          <Route path="/user/:username" component={UserOverview} exact={true} />
+          <Route exact path="/" component={Home} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  </UserContext.Provider>
+
 );
 
 export default App;

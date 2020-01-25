@@ -1,0 +1,85 @@
+h1 {
+    color:white;
+}
+
+.divider {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    height:1px;
+    background-color: #04e487;
+}
+
+.user-container {
+    width: 90%;
+    display: block;
+    height:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: rgb(10, 10, 10);
+    margin-top:50px;
+    border-radius: 50px;
+    box-shadow:inset 0 0 20px 0px rgba(0,0,0,1);
+
+    h1 {
+        text-align:center;
+        margin-top:15px;
+        text-decoration:underline #04e487;
+        text-decoration-color: #04e487;
+        -webkit-text-decoration-color: #04e487;
+    }
+    
+    .avatar-container {
+        margin-left:auto;
+        margin-right:auto;
+        width:100px;
+        height:100px;
+
+        .image-avatar {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: unset;
+        }
+    }
+
+    .metrics-container {
+        margin-top:30px;
+        ion-grid {
+            ion-row {
+                ion-col {
+                    text-align: center;
+                    color:white;
+                    ion-label {
+                        font-weight:900;
+                    }
+                    h2 {
+
+                        text-decoration:underline #04e487;
+                        text-decoration-color: #04e487;
+                        -webkit-text-decoration-color: #04e487;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .repo-container {
+        .list-ios {
+            margin-top:0;
+        }
+
+        ion-item {
+            h1 {
+                text-align: unset;
+                text-decoration: unset;
+                font-weight: 900;
+                font-size:20px;
+            }
+        }
+    }
+
+
+    
+}

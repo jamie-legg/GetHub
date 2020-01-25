@@ -1,0 +1,48 @@
+.app-title-container {
+    font-size: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    margin-top:200px;
+
+    .app-title {
+        text-align: center;
+
+        .title-suffix {
+            font-weight: 700;
+        }
+    }
+
+    .app-logo {
+        max-width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
+}
+
+.app-search-bar {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    .btn-search {
+        --border-radius: 50px;
+    }
+}
+
+ion-icon {
+    &[class*="sara"] {
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+      mask-image: url(../../assets/logo.svg);
+    }
+}
+
+.loading-container {
+    color:black;
+}
