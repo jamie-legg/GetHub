@@ -29,6 +29,7 @@ class Home extends Component<IProps, { user: string, showLoading: boolean, userI
   }
 
   alertUser() {
+    this.setState({showLoading:false})
     this.props.history.push(`/user/${this.state.user}`);
   }
 

@@ -107,7 +107,7 @@ export class UserOverview extends Component<IProps, { user: string, showLoading:
                         Activity
                     </IonItem>
                     <div className="repo-container">
-                        <IonList mode="ios">
+                        <IonList mode="ios" className="repo-list">
                             {repos}
                         </IonList>
 
