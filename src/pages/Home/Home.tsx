@@ -61,6 +61,7 @@ class Home extends Component<IProps, { user: string, showLoading: boolean, userI
           isOpen={this.state.showLoading}
           onDidDismiss={() => this.alertUser()}
           message={'Loading...'}
+          mode="md"
           duration={1000}
         />
         </IonContent>

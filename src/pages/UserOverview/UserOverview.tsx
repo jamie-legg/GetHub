@@ -4,7 +4,7 @@ import { RouteComponentProps } from "react-router";
 import "./UserOverview.scss"
 import { IonGrid, IonRow, IonCol, IonList, IonPage, IonText, IonItem, IonAvatar, IonLabel, IonBadge, IonContent, IonToolbar, IonButton, IonHeader, IonIcon } from '@ionic/react';
 import axios from "axios";
-import { arrowRoundBack } from "ionicons/icons"
+import { arrowRoundBack, arrowForward } from "ionicons/icons"
 
 interface IProps extends RouteComponentProps<any> {
 
@@ -43,6 +43,11 @@ export class UserOverview extends Component<IProps, { user: string, showLoading:
 
     componentDidUpdate(oldState: any, newState: any) {
         console.log({ oldState, newState })
+    }
+
+    goActivity() {
+        console.log("badge clicked")
+        this.props.history.push(`/activity/${this.state.user}`);
     }
 
     render() {
@@ -100,12 +105,14 @@ export class UserOverview extends Component<IProps, { user: string, showLoading:
 
                                 </IonCol>
                             </IonRow>
-                        </IonGrid>
+                            <IonRow>
+                                <IonCol>
+                                    <IonBadge onClick={() => this.goActivity()}>View Activity <IonIcon icon={arrowForward}></IonIcon></IonBadge>
+                                </IonCol>
+                            </IonRow>
+                            </IonGrid>
                     </div>
                     <div className="divider"></div>
-                    <IonItem routerLink={`activity/${this.state.user}`}>
-                        Activity
-                    </IonItem>
                     <div className="repo-container">
                         <IonList mode="ios" className="repo-list">
                             {repos}

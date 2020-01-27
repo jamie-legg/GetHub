@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "proxy": "http://localhost:8080",
+  "homepage": "https://jamielegg.com/gethub",
   "dependencies": {
     "@ionic/react": "^4.11.8",
     "@ionic/react-router": "^4.11.8",
