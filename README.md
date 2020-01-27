@@ -2,7 +2,7 @@
 
 ### Demonstration of React/TypeScript/Jest toolkit.
 
-This codebase is served at gethub.jamielegg.com.
+This codebase is served [here](http://jamielegg.com/gethub)
 
 This was built on the following specifications:
 
